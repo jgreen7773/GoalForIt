@@ -32,7 +32,7 @@ namespace GoalForIt
             //     options.CheckConsentNeeded = context => true;
             //     options.MinimumSameSitePolicy = SameSiteMode.None;
             // });
-            services.AddDbContext<MySqlDbContextOptionsExtensions>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+            services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
             services.AddSpaStaticFiles();
             services.AddSession();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

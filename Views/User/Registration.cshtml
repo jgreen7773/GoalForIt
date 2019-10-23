@@ -1,0 +1,30 @@
+@using GoalForIt.Models;
+@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+</head>
+<body style="background:linear-gradient(to top left, maroon, brown, maroon);margin:auto;width:970px;height:970px;">
+    <h1 style="width:777px;display:inline-block;">Register to Belt Exam!</h1>
+    <a href="/Login">Already Registered?</a>
+    <form asp-action="ProcessRegistration" asp-controller="User" method="POST">
+        <span asp-validation-for="Name"></span><br>
+        <label asp-for="Name">Name</label><br>
+        <input type="input" asp-for="Name"><br>
+        <span asp-validation-for="Email"></span><br>
+        <label asp-for="Email">Email</label><br>
+        <input type="email" asp-for="Email"><br>
+        <span asp-validation-for="Password"></span><br>
+        <label asp-for="Password">Password</label><br>
+        <input type="password" asp-for="Password"><br>
+        <span asp-validation-for="ConfirmPassword"></span><br>
+        <label asp-for="ConfirmPassword">Confirm Password</label><br>
+        <input type="password" asp-for="ConfirmPassword"><br><br>
+        <input type="submit" Value="Sign Up Now">
+    </form>
+</body>
+</html>
