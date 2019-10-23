@@ -1,3 +1,5 @@
+@using GoalForIt.Models;
+@model User
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,20 @@
     <title>Setup Your Profile!</title>
 </head>
 <body>
-    
+    <form asp-action="ProcessProfileSetup" asp-controller="Message" method="POST">
+        <span asp-validation-for="Name"></span><br>
+        <label asp-for="Name">Name</label><br>
+        <input type="input" asp-for="Name"><br>
+        <span asp-validation-for="Email"></span><br>
+        <label asp-for="Email">Email</label><br>
+        <input type="email" asp-for="Email"><br>
+        <span asp-validation-for="Password"></span><br>
+        <label asp-for="Password">Password</label><br>
+        <input type="password" asp-for="Password"><br>
+        <span asp-validation-for="ConfirmPassword"></span><br>
+        <label asp-for="ConfirmPassword">Confirm Password</label><br>
+        <input type="password" asp-for="ConfirmPassword"><br><br>
+        <input type="submit" Value="Sign Up Now">
+    </form>
 </body>
 </html>
