@@ -55,7 +55,6 @@ namespace GoalForIt
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
             // app.UseCookiePolicy();
-            app.UseSpaStaticFiles();
             app.UseSession();
             app.UseMvc(routes =>
             {
