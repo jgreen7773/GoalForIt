@@ -73,6 +73,19 @@ namespace GoalForIt.Controllers
         }
 
         [HttpPost]
+        [Route("ProcessProfileSetup")]
+        public IActionResult ProcessProfileSetup()
+        {
+            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            {
+                return Redirect("/Login");
+            }
+            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            return Redirect("/");
+        }
+
+        [HttpPost]
         [Route("ProcessCreateMessage")]
         public IActionResult ProcessCreateMessage(Message NewMessage)
         {

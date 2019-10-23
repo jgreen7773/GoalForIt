@@ -13,6 +13,7 @@ namespace GoalForIt.Models
         public int UserId{get;set;}
         [Required]
         public string Name{get;set;}
+        public string Gender{get;set;}
         [Required]
         [EmailAddress]
         public string Email{get;set;}

@@ -1,0 +1,25 @@
+@using GoalForIt.Models;
+@model LoginUser
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+    <!--  style="background:linear-gradient(to top left, maroon, brown, maroon);margin:auto;width:970px;height:970px;" -->
+    <h1 style="width:777px;display:inline-block;">GoalForIt: ...The Date Battle-Field!</h1>
+    <a href="/">Need to Register?</a>
+    <form asp-action="ProcessLogin" asp-controller="User" method="POST">
+        <span asp-validation-for="LoginEmail"></span><br>
+        <label asp-for="LoginEmail">Email</label><br>
+        <input type="email" asp-for="LoginEmail"><br>
+        <span asp-validation-for="LoginPassword"></span><br>
+        <label asp-for="LoginPassword">Password</label><br>
+        <input type="password" asp-for="LoginPassword"><br><br>
+        <input type="submit" value="Log In">
+    </form>
+</body>
+</html>
