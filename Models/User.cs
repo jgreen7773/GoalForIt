@@ -28,7 +28,8 @@ namespace GoalForIt.Models
         [DataType(DataType.Password)]
         public string ConfirmPassword{get;set;}
         [NotMapped]
-        public List<Message> ThisUsersMessages{get;set;}
+        public List<Message> MessageToUser{get;set;}
+        public List <Response> MessageFromUser{get;set;}
         public int FiestinessLevel{get;set;}
         public DateTime CreatedAt{get;set;} = DateTime.Now;
         public DateTime UpdatedAt{get;set;} = DateTime.Now;
