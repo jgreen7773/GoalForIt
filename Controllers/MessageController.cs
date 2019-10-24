@@ -30,6 +30,50 @@ namespace GoalForIt.Controllers
             }
             int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
             User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            return View();
+        }
+
+        [HttpGet]
+        [Route("ManCave")]
+        public IActionResult ManCave()
+        {
+            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            {
+                return Redirect("/Login");
+            }
+            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            return View();
+        }
+
+        [HttpGet]
+        [Route("SheShack")]
+        public IActionResult SheShack()
+        {
+            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            {
+                return Redirect("/Login");
+            }
+            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            return View();
+        }
+
+        [HttpGet]
+        [Route("TheField")]
+        public IActionResult TheField()
+        {
+            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            {
+                return Redirect("/Login");
+            }
+            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            
+            // List<Message> contact = dbContext.Messages
+            // .Include(w=> w.Responses)
+            // .ToList();
+            // ViewBag.Contact = contact;
             List<Message> connection = dbContext.Messages
             .ToList();
             ViewBag.Play = 544;
@@ -90,52 +134,7 @@ namespace GoalForIt.Controllers
                 
             }
             return View();
-        }
-
-        [HttpGet]
-        [Route("ManCave")]
-        public IActionResult ManCave()
-        {
-            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            {
-                return Redirect("/Login");
-            }
-            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
-            return View();
-        }
-
-        [HttpGet]
-        [Route("SheShack")]
-        public IActionResult SheShack()
-        {
-            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            {
-                return Redirect("/Login");
-            }
-            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
-            return View();
-        }
-
-        [HttpGet]
-        [Route("TheField")]
-        public IActionResult TheField()
-        {
-            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            {
-                return Redirect("/Login");
-            }
-            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
-            
-            List<Message> connection = dbContext.Messages
-            .Include(w=> w.Responses)
-            .ToList();
-            ViewBag.Connections = connection;
-            ViewBag.Play = 50;
          
-            return View();
         }
 
         [HttpPost]
