@@ -28,20 +28,45 @@
   .tv
   {
     width: 300px;
+    /* margin-bottom: 115px; */
   }
   .couch
   {
       width: 300px;
       height: 200px;
-      margin-right: 500px;
+      /* margin-right: 500px; */
+      /* margin-bottom: 100px; */
   }
   .lamp
   {
       width: 150;
       height: 150;
   }
-  .couch
+  /* .couch
   {
     width: 250;
     height: 200;
+  } */
+  .player
+  {
+    /* margin-top: 94px; */
+    width: 300px;
+    position: relative;
+    /* margin-left: 700px;
+    margin-bottom: 300px; */
+    display: inlineblock;
+    /* position: absolute; */
+    /* margin-right: 500px; */
   }
+  .helmet
+  {
+      margin-top: 300px;
+  }
+  .ball
+  {
+    display: inlineblock;
+  }
+
+  /* tv     margin-bottom: 115px; */
+
+  /* hemet      */
