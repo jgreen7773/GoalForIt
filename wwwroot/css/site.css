@@ -54,3 +54,96 @@ body {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
 }
+/* .backgroundbody{
+  background-image: url(/lib/ManCave.jpg);margin:0;
+} */
+.FieldBody{
+  background-image: url(/lib/Field2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+  width:1908px;
+  margin:auto;
+}
+.Form{
+  width:281px;
+  height:555px;
+  background-color:grey;
+  display:inline-block;
+  border-radius:22px;
+}
+.inputheader{
+  text-align:center;
+  background-color:lightblue;
+  height:38px;
+  margin-bottom:0px;
+  border-top-right-radius:14px;
+  border-top-left-radius:14px;
+  font-family:Monaco;
+  padding:5px;
+  font-size:22px;
+}
+.Girl{
+  width:281px;
+  height:475px;
+  background-image: url(/lib/PlayerGirl.jpeg);
+  opacity: .3;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:inline-block;
+  border-top-right-radius:4px;
+  border-top-left-radius:4px;
+  border:.5px solid black;
+  color:white;
+  font-size:28px;
+}
+.Girl:hover{
+  opacity: .7;
+}
+.Guy{
+  width:281px;
+  height:475px;
+  background-image: url(/lib/PlayerGuy2.jpg);
+  opacity: .3;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:inline-block;
+  border-top-right-radius:4px;
+  border-top-left-radius:4px;
+  border:.5px solid black;
+  color:white;
+  font-size:28px;
+}
+.Guy:hover{
+  opacity: .7;
+}
+.inputsubmit{
+  width:281px;
+  height:44px;
+  background-color:lightblue;
+  border-bottom-right-radius:22px;
+  border-bottom-left-radius:22px;
+}
+.ManCaveBody{
+  background-image: url(/Images/Man-Cave/Wall.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+  display:inline-block;
+  width:1908px;
+  margin:auto;
+}
+.ProfileSetupBody{
+  background-image: url(/lib/PlayerGuy3.jpg);
+  opacity: .3;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:inline-block;
+  width:1908px;
+  margin:auto;
+}
