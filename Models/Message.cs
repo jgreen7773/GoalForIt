@@ -15,6 +15,7 @@ namespace GoalForIt.Models
         public User MessageCreator{get;set;}
         public int UserId{get;set;}
         public int SpicyMessageLevel{get;set;}
+        public List <Response> Responses {get;set;}
         public DateTime CreatedAt{get;set;} = DateTime.Now;
         public DateTime UpdatedAt{get;set;} = DateTime.Now;
 

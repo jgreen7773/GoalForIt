@@ -7,6 +7,7 @@ namespace GoalForIt.Models
         public MyContext(DbContextOptions options) : base(options) {}
         public DbSet<User> Users{get;set;}
         public DbSet<Message> Messages{get;set;}
+        public DbSet<Response> Response{get;set;}
         // public DbSet<Association> Associations{get;set;}
     }
 }
