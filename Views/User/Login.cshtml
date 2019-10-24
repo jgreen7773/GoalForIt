@@ -11,16 +11,21 @@
 </head>
 <body>
     <!--  style="background:linear-gradient(to top left, maroon, brown, maroon);margin:auto;width:970px;height:970px;" -->
-    <h1 style="width:777px;display:inline-block;">GoalForIt: ...The Date Battle-Field!</h1>
-    <a href="/">Need to Register?</a>
-    <form asp-action="ProcessLogin" asp-controller="User" method="POST">
-        <span asp-validation-for="LoginEmail"></span><br>
-        <label asp-for="LoginEmail">Email</label><br>
-        <input type="email" asp-for="LoginEmail"><br>
-        <span asp-validation-for="LoginPassword"></span><br>
-        <label asp-for="LoginPassword">Password</label><br>
-        <input type="password" asp-for="LoginPassword"><br><br>
-        <input type="submit" value="Log In">
-    </form>
+    <video autoplay muted loop class="vid" style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;">
+        <source src="/Loops/Registration.mp4" type="video/mp4">
+    </video>
+    <div class="video description" style="position:fixed;bottom:0;background:rgba(0,0,0,0.3);color:#f1f1f1;width:100%;padding:77px;margin-bottom:333px;">
+        <a href="/" style="margin-left:50px;">Need to Register?</a>
+        <h1 style="margin-leftwidth:777px;text-align:right;margin-right:175px;">GoalForIt: ...The Date Battle-Field!</h1>
+        <form asp-action="ProcessLogin" asp-controller="User" method="POST">
+            <span asp-validation-for="LoginEmail" style="margin-left:1100px;"></span><br>
+            <label asp-for="LoginEmail" style="margin-left:1100px;">Email</label><br>
+            <input type="email" asp-for="LoginEmail" style="margin-left:1100px;"><br>
+            <span asp-validation-for="LoginPassword" style="margin-left:1100px;"></span><br>
+            <label asp-for="LoginPassword" style="margin-left:1100px;">Password</label><br>
+            <input type="password" asp-for="LoginPassword" style="margin-left:1100px;"><br><br>
+            <input type="submit" value="Log In" style="margin-left:1100px;">
+        </form>
+    </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 @using GoalForIt.Models;
-@model User
+@model LoginUser
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,24 @@
     <title>Setup Your Profile!</title>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body class="ProfileSetupBody">
-    
+<body>
+    <!-- <video autoplay muted loop class="vid" style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;">
+        <source src="/Loops/Registration.mp4" type="video/mp4">
+    </video> -->
+    <div class="video description" style="position:fixed;bottom:0;background:rgba(0,0,0,0.3);color:#f1f1f1;width:100%;padding:77px;margin-bottom:333px;">
+        <a href="/" style="margin-left:50px;">Need to Register?</a>
+        <h1 style="margin-leftwidth:777px;text-align:right;margin-right:175px;">GoalForIt: ...The Date Battle-Field!</h1>
+        <form asp-action="ProcessLogin" asp-controller="User" method="POST">
+            <span asp-validation-for="LoginEmail" style="margin-left:1100px;"></span><br>
+            <label asp-for="LoginEmail" style="margin-left:1100px;">Email</label><br>
+            <input type="email" asp-for="LoginEmail" style="margin-left:1100px;"><br>
+            <span asp-validation-for="LoginPassword" style="margin-left:1100px;"></span><br>
+            <label asp-for="LoginPassword" style="margin-left:1100px;">Password</label><br>
+            <input type="password" asp-for="LoginPassword" style="margin-left:1100px;"><br><br>
+            <input type="submit" value="Log In" style="margin-left:1100px;">
+        </form>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+    <script>paypal.Buttons().render('body');</script>
 </body>
 </html>
