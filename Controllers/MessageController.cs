@@ -22,14 +22,14 @@ namespace GoalForIt.Controllers
 
         [HttpGet]
         [Route("ProfileSetup")]
-        public IActionResult Dashboard(int ActId)
+        public IActionResult ProfileSetup(int ActId)
         {
-            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            {
-                return Redirect("/Login");
-            }
-            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            // if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            // {
+            //     return Redirect("/Login");
+            // }
+            // int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            // User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
             return View();
         }
 
@@ -37,12 +37,12 @@ namespace GoalForIt.Controllers
         [Route("ManCave")]
         public IActionResult ManCave()
         {
-            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            {
-                return Redirect("/Login");
-            }
-            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            // if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            // {
+            //     return Redirect("/Login");
+            // }
+            // int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            // User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
             return View();
         }
 
@@ -63,18 +63,18 @@ namespace GoalForIt.Controllers
         [Route("TheField")]
         public IActionResult TheField()
         {
-            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            {
-                return Redirect("/Login");
-            }
-            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            // if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            // {
+            //     return Redirect("/Login");
+            // }
+            // int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            // User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
             return View();
         }
 
         [HttpPost]
         [Route("ProcessProfileSetup")]
-        public IActionResult ProcessProfileSetup()
+        public IActionResult ProcessProfileSetup(Message NewMessage)
         {
             if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
             {

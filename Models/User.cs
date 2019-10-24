@@ -9,10 +9,12 @@ namespace GoalForIt.Models
 {
     public class User
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int UserId{get;set;}
         [Required]
-        public string Name{get;set;}
+        public string FirstName{get;set;}
+        public string LastName{get;set;}
         public string Gender{get;set;}
         [Required]
         [EmailAddress]
