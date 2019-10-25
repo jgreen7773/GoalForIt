@@ -14,34 +14,34 @@
     <video autoplay muted loop class="vid" style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;">
         <source src="/Loops/Registration.mp4" type="video/mp4">
     </video>
-    <div class="video description" style="position:fixed;bottom:0;background:rgba(0,0,0,0.3);color:#f1f1f1;width:100%;padding:20px;">
-        <h1 style="width:777px;display:inline-block;">GoalForIt: ...The Date Battle-Field!</h1>
-        <a href="/Login">Already Registered?</a>
+    <div class="video description" style="position:fixed;bottom:0;background:rgba(0,0,0,0.3);color:#f1f1f1;width:100%;padding:77px;">
+        <a href="/Login" style="margin-left:50px;">Already Registered?</a>
+        <h1 style="margin-leftwidth:777px;text-align:right;margin-right:175px;">GoalForIt: ...The Date Battle-Field!</h1>
         <form asp-action="ProcessRegistration" asp-controller="User" method="POST">
-            <span asp-validation-for="FirstName"></span><br>
-            <label asp-for="FirstName">First Name</label><br>
-            <input type="input" asp-for="FirstName"><br>
-            <span asp-validation-for="LastName"></span><br>
-            <label asp-for="LastName">Last Name</label><br>
-            <input type="input" asp-for="LastName"><br>
-            <span asp-validation-for="Gender"></span><br>
-            <label asp-for="Gender">Gender:</label><br>
-            <input type="radio" asp-for="Gender" value="Male" checked="checked" style="display:inline-block;">
-            <label for="Male" asp-for="Gender">Male</label><br>
-            <input type="radio" asp-for="Gender" value="Female" style="display:inline-block;">
-            <label for="Female" asp-for="Gender">Female</label><br>
-            <input type="radio" asp-for="Gender" value="Other" style="display:inline-block;">
-            <label for="Other" asp-for="Gender">Other</label><br>
-            <span asp-validation-for="Email"></span><br>
-            <label asp-for="Email">Email</label><br>
-            <input type="email" asp-for="Email"><br>
-            <span asp-validation-for="Password"></span><br>
-            <label asp-for="Password">Password</label><br>
-            <input type="password" asp-for="Password"><br>
-            <span asp-validation-for="ConfirmPassword"></span><br>
-            <label asp-for="ConfirmPassword">Confirm Password</label><br>
-            <input type="password" asp-for="ConfirmPassword"><br><br>
-            <input type="submit" Value="Sign Up Now">
+            <span asp-validation-for="FirstName" style="margin-left:1100px;"></span><br>
+            <label asp-for="FirstName" style="margin-left:1100px;">First Name</label><br>
+            <input type="input" asp-for="FirstName" style="margin-left:1100px;"><br>
+            <span asp-validation-for="LastName" style="margin-left:1100px;"></span><br>
+            <label asp-for="LastName" style="margin-left:1100px;">Last Name</label><br>
+            <input type="input" asp-for="LastName" style="margin-left:1100px;"><br>
+            <span asp-validation-for="Gender" style="margin-left:1100px;"></span><br>
+            <label asp-for="Gender" style="margin-left:1100px;">Gender:</label>
+            <input type="radio" asp-for="Gender" value="Male" checked="checked" style="display:inline-block;margin-left:1100px;">
+            <label for="Male" asp-for="Gender">Male</label>
+            <input type="radio" asp-for="Gender" value="Female" style="display:inline-block;margin-left:1100px;">
+            <label for="Female" asp-for="Gender">Female</label>
+            <input type="radio" asp-for="Gender" value="Other" style="display:inline-block;margin-left:1100px;">
+            <label for="Other" asp-for="Gender">Other</label>
+            <span asp-validation-for="Email" style="margin-left:1100px;"></span><br>
+            <label asp-for="Email" style="margin-left:1100px;">Email</label><br>
+            <input type="email" asp-for="Email" style="margin-left:1100px;"><br>
+            <span asp-validation-for="Password" style="margin-left:1100px;"></span><br>
+            <label asp-for="Password" style="margin-left:1100px;">Password</label><br>
+            <input type="password" asp-for="Password" style="margin-left:1100px;"><br>
+            <span asp-validation-for="ConfirmPassword" style="margin-left:1100px;"></span><br>
+            <label asp-for="ConfirmPassword" style="margin-left:1100px;">Confirm Password</label><br>
+            <input type="password" asp-for="ConfirmPassword" style="margin-left:1100px;display:inline-block;">
+            <input type="submit" Value="Sign Up Now!" style="margin-left:1100px;display:inline-block;">
         </form>
     </div>
 </body>

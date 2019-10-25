@@ -30,6 +30,9 @@ namespace GoalForIt.Controllers
             }
             int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
             User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            List<Message> connection = dbContext.Messages
+            .ToList();
+            ViewBag.Play = 544;
             return View();
         }
 
@@ -63,13 +66,12 @@ namespace GoalForIt.Controllers
         [Route("TheField")]
         public IActionResult TheField()
         {
-            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            {
-                return Redirect("/Login");
-            }
-            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
-            
+            // if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            // {
+            //     return Redirect("/Login");
+            // }
+            // int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            // User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
             // List<Message> contact = dbContext.Messages
             // .Include(w=> w.Responses)
             // .ToList();
@@ -95,8 +97,6 @@ namespace GoalForIt.Controllers
                 {
                     ViewBag.Play -= 10;
                 }
-
-                
             }
             List <Response> contact = dbContext.Response.ToList();
             foreach(Response r in contact)
@@ -114,7 +114,6 @@ namespace GoalForIt.Controllers
                         ViewBag.Play -= 1;
                     }
                 }
-                
             }
             foreach(Response r in contact)
             {
@@ -131,32 +130,9 @@ namespace GoalForIt.Controllers
                         ViewBag.Play += 5;
                     }
                 }
-                
             }
             return View();
-
-         
-
         }
-
-//         [HttpGet]
-//         [Route("TheField")]
-//         public IActionResult TheField()
-//         {
-//             if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-//             {
-//                 return Redirect("/Login");
-//             }
-//             int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-//             User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
-            
-//             List<Message> connection = dbContext.Messages
-//             .Include(w=> w.Responses)
-//             .ToList();
-//             ViewBag.Connections = connection;
-//             ViewBag.Play = 50;
-//             return View();
-//         }
 
         [HttpPost]
         [Route("ProcessProfileSetup")]
@@ -219,7 +195,6 @@ namespace GoalForIt.Controllers
         }
     }
 }
-
 
 // ViewBag.loggedIn = (int)LoggedIn;
             
