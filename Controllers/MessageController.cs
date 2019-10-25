@@ -24,71 +24,34 @@ namespace GoalForIt.Controllers
         [Route("ProfileSetup")]
         public IActionResult ProfileSetup(int ActId)
         {
-            // if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            // {
-            //     return Redirect("/Login");
-            // }
-            // int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            // User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
-            // List<Message> connection = dbContext.Messages
-            // .ToList();
-            // ViewBag.Play = 544;
-            // foreach(Message m in connection)
-            // {
-            //     if(m.Responses.Count == 5)
-            //     {
-            //         ViewBag.Play += 15;
-            //     }
-            //     if(m.Responses.Count == 20)
-            //     {
-            //         ViewBag.Play += 30;
-            //     }
-            //     if(m.Responses.Count > 30)
-            //     {
-            //         ViewBag.Play += 60;
-            //     }
-            //     else
-            //     {
-            //         ViewBag.Play -= 10;
-            //     }
-
-                
-            // }
-            // List <Response> contact = dbContext.Response.ToList();
-            // foreach(Response r in contact)
-            // {
-            //     string[] strArray; 
-            //     strArray = new string [] {"love","age","sexy","date","sex","meet","future","zodiac","name","kids","like"};
-            //     foreach(string i in strArray)
-            //     {
-            //         if(r.ResponseContent.Contains("i") == true)
-            //         {
-            //             ViewBag.Play += 2;
-            //         }
-            //         else
-            //         {
-            //             ViewBag.Play -= 1;
-            //         }
-            //     }
-                
-            // }
-            // foreach(Response r in contact)
-            // {
-            //     string[] strArray2; 
-            //     strArray2 = new string [] {"hate","ugly","money","ex","girlfriend","boyfriend","broke","bye","bitch","crazy","i'm criminal"};
-            //     foreach(string i in strArray2)
-            //     {
-            //         if(r.ResponseContent.Contains("i") == true)
-            //         {
-            //             ViewBag.Play -= 5;
-            //         }
-            //         else
-            //         {
-            //             ViewBag.Play += 5;
-            //         }
-            //     }
-                
-            // }
+            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            {
+                return Redirect("/Login");
+            }
+            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            List<Message> connection = dbContext.Messages
+            .ToList();
+            ViewBag.Play = 544;
+            foreach(Message m in connection)
+            {
+                if(m.Responses.Count == 5)
+                {
+                    ViewBag.Play += 15;
+                }
+                if(m.Responses.Count == 20)
+                {
+                    ViewBag.Play += 30;
+                }
+                if(m.Responses.Count > 30)
+                {
+                    ViewBag.Play += 60;
+                }
+                else
+                {
+                    ViewBag.Play -= 10;
+                }
+            }
             return View();
         }
 
@@ -96,12 +59,12 @@ namespace GoalForIt.Controllers
         [Route("ManCave")]
         public IActionResult ManCave()
         {
-            // if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            // {
-            //     return Redirect("/Login");
-            // }
-            // int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            // User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            {
+                return Redirect("/Login");
+            }
+            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
             return View();
         }
 
@@ -109,12 +72,12 @@ namespace GoalForIt.Controllers
         [Route("SheShack")]
         public IActionResult SheShack()
         {
-            // if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-            // {
-            //     return Redirect("/Login");
-            // }
-            // int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-            // User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
+            if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
+            {
+                return Redirect("/Login");
+            }
+            int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
+            User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
             return View();
         }
 
@@ -128,12 +91,65 @@ namespace GoalForIt.Controllers
             // }
             // int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
             // User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
-            
+            // List<Message> contact = dbContext.Messages
+            // .Include(w=> w.Responses)
+            // .ToList();
+            // ViewBag.Contact = contact;
             List<Message> connection = dbContext.Messages
-            .Include(w=> w.Responses)
             .ToList();
-            ViewBag.Connections = connection;
-            ViewBag.Play = 50;
+            ViewBag.Play = 544;
+            foreach(Message m in connection)
+            {
+                if(m.Responses.Count == 5)
+                {
+                    ViewBag.Play += 15;
+                }
+                if(m.Responses.Count == 20)
+                {
+                    ViewBag.Play += 30;
+                }
+                if(m.Responses.Count > 30)
+                {
+                    ViewBag.Play += 60;
+                }
+                else
+                {
+                    ViewBag.Play -= 10;
+                }
+            }
+            List <Response> contact = dbContext.Response.ToList();
+            foreach(Response r in contact)
+            {
+                string[] strArray; 
+                strArray = new string [] {"love","age","sexy","date","sex","meet","future","zodiac","name","kids","like"};
+                foreach(string i in strArray)
+                {
+                    if(r.ResponseContent.Contains("i") == true)
+                    {
+                        ViewBag.Play += 2;
+                    }
+                    else
+                    {
+                        ViewBag.Play -= 1;
+                    }
+                }
+            }
+            foreach(Response r in contact)
+            {
+                string[] strArray2; 
+                strArray2 = new string [] {"hate","ugly","money","ex","girlfriend","boyfriend","broke","bye","bitch","crazy","i'm criminal"};
+                foreach(string i in strArray2)
+                {
+                    if(r.ResponseContent.Contains("i") == true)
+                    {
+                        ViewBag.Play -= 5;
+                    }
+                    else
+                    {
+                        ViewBag.Play += 5;
+                    }
+                }
+            }
             return View();
         }
 
@@ -173,44 +189,6 @@ namespace GoalForIt.Controllers
             }
         }
 
-        // [HttpGet]
-        // [Route("ProcessReact/{MessageId}")]
-        // public IActionResult ProcessJoinAct(int MessageId)
-        // {
-        //     if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-        //     {
-        //         return Redirect("/Login");
-        //     }
-        //     int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-        //     User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
-        //     Association NewReaction = new Association();
-        //     NewParticipant.UserId = LoggedUserId;
-        //     NewParticipant.MessageId = MessageId;
-        //     dbContext.Add(NewParticipant);
-        //     dbContext.SaveChanges();
-        //     return Redirect("/TheField");
-        // }
-
-        // [HttpGet]
-        // [Route("ProcessCancelReact/{MessageId}")]
-        // public IActionResult ProcessLeaveAct(int MessageId)
-        // {
-        //     if (HttpContext.Session.GetObjectFromJson("LoggedUserEmail") == null)
-        //     {
-        //         return Redirect("/Login");
-        //     }
-        //     int LoggedUserId = HttpContext.Session.GetObjectFromJson("LoggedUserEmail").UserId;
-        //     User LoggedUser = HttpContext.Session.GetObjectFromJson("LoggedUserEmail");
-        //     Association Retrieve = dbContext.Associations.FirstOrDefault(a => a.ActId == ActId);
-        //     dbContext.Associations.Remove(Retrieve);
-        //     dbContext.SaveChanges();
-        //     return Redirect("/Dashboard/{ActId}");
-        // }
-
-
-
-
-
         [HttpGet]
         [Route("Delete/{MessageId}")]
         public IActionResult Delete(int MessageId)
@@ -236,7 +214,6 @@ namespace GoalForIt.Controllers
         }
     }
 }
-
 
 // ViewBag.loggedIn = (int)LoggedIn;
             
