@@ -33,25 +33,6 @@ namespace GoalForIt.Controllers
             List<Message> connection = dbContext.Messages
             .ToList();
             ViewBag.Play = 544;
-            foreach(Message m in connection)
-            {
-                if(m.Responses.Count == 5)
-                {
-                    ViewBag.Play += 15;
-                }
-                if(m.Responses.Count == 20)
-                {
-                    ViewBag.Play += 30;
-                }
-                if(m.Responses.Count > 30)
-                {
-                    ViewBag.Play += 60;
-                }
-                else
-                {
-                    ViewBag.Play -= 10;
-                }
-            }
             return View();
         }
 
