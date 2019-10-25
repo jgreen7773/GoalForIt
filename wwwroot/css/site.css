@@ -65,6 +65,8 @@ body {
   background-size: cover;
   width:1908px;
   margin:auto;
+  padding-left:68px;
+  padding-top:110px;
 }
 .Form{
   width:281px;
@@ -121,11 +123,20 @@ body {
   opacity: .7;
 }
 .inputsubmit{
+  border:0;
+  padding:1em;
+  position:relative;
+  cursor:pointer;
+  background:none;
+  opacity: 1.5;
   width:281px;
   height:44px;
-  background-color:lightblue;
+  background-color:rgb(8, 79, 185);
   border-bottom-right-radius:22px;
   border-bottom-left-radius:22px;
+}
+.inputsubmit:hover{
+  opacity: 0.7;
 }
 .ManCaveBody{
   background-image: url(/Images/Man-Cave/Wall.jpg);
@@ -138,12 +149,4 @@ body {
   margin:auto;
 }
 .ProfileSetupBody{
-  background-image: url(/lib/PlayerGuy3.jpg);
-  opacity: .3;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display:inline-block;
-  width:1908px;
-  margin:auto;
 }

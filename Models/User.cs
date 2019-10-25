@@ -9,7 +9,6 @@ namespace GoalForIt.Models
 {
     public class User
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int UserId{get;set;}
         [Required]
